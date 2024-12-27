@@ -5,7 +5,7 @@ const app = express();
 const path = require("path")
 const dotenv = require("dotenv")
 dotenv.config()
-let mongo_url = process.env.MONGO_URL
+let mongo_url = process.env.MONGO_URL  // instead  of use mongo url for atlas
 const connectDb = async () => {
     await mongoose.connect("mongodb://localhost:27017/blog_api"
     ).then(data => {
